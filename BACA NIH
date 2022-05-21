@@ -4,3 +4,6 @@ M > Models
 V > Resources > views
 C > Http > Controler
 Route > routes > web
+
+--> buat kontroller
+CTRL SHIT P , ketik artisan make kontroler, ketik nama, pilih basic

@@ -12,7 +12,11 @@
             <li class="nav-item">
                 <a class="nav-link" href="/crud">CRUD</a>
             </li>
-
+        </ul>
+        <ul class="navbar-nav mx-sm-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/login">LOGIN</a>
+            </li>
         </ul>
     </div>
 </nav>

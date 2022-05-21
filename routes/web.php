@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UtamaController;
 
 /*
@@ -16,6 +17,8 @@ use App\Http\Controllers\UtamaController;
 
 // ===== ROUTE PAKAI KONTROLLER =====
 Route::get('/', [UtamaController::class,'index']);
+
+Route::get('/login', [LoginController::class,'index']);
 
 Route::get('/awalan', function () {
 
