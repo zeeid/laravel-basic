@@ -1,0 +1,6 @@
+- How to start : php artisan serve
+
+M > Models
+V > Resources > views
+C > Http > Controler
+Route > routes > web
