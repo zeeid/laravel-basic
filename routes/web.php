@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UtamaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// ===== ROUTE PAKAI KONTROLLER =====
+Route::get('/', [UtamaController::class,'index']);
+
+Route::get('/awalan', function () {
+
+    $data = [
+        'data1'=> 'DATA 1',
+        'data2'=> 'DATA 2',
+        'judul'=> 'AWALAN',
+    ];
+
+    return view('awalan',$data);
 });
