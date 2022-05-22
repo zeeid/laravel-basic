@@ -26917,7 +26917,7 @@ body.box-layout .pcoded-navbar.theme-horizontal ~ .pcoded-header {
 }
 
 .form-group .form-control {
-    padding-left: 0;
+    /* padding-left: 0; */
     padding-right: 0;
 }
 

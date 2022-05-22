@@ -153,6 +153,14 @@
 <script src="assets/chartjs-plugin-datalabels@0.7.0"></script>
 
 <script>
+    function generate_waktu(){
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+        return time
+    }
+
     function menu(menunya){
         var tokennya = $("#tokenku").val()
         $.ajax({

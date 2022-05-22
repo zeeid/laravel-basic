@@ -28,7 +28,7 @@
                     <a  class="nav-link " onclick="menu('Setting Biaya')"><span class="pcoded-micon"><i class="fa fa-car"></i></span><span class="pcoded-mtext">Setting Jenis & Biaya</span></a>
                 </li>
                 <li class="nav-item">
-                    <a  class="nav-link " onclick="menu('Pemesanan')"><span class="pcoded-micon"><i class="fa fa-cutlery"></i></span><span class="pcoded-mtext">Transaksi Pemesanan</span></a>
+                    <a  class="nav-link " onclick="menu('Parkir')"><span class="pcoded-micon"><i class="fa fa-map-marker"></i></span><span class="pcoded-mtext">Transaksi Parkir</span></a>
                 </li>
                 <li class="nav-item">
                     <a  class="nav-link " onclick="menu('Laporan')"><span class="pcoded-micon"><i class="fa fa-book"></i></span><span class="pcoded-mtext">Laporan Transaksi</span></a>

@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardController;
 
 // ==== KONTROLLER DALAM FOLDER==
 use App\Http\Controllers\Api\MenuController;
+use App\Http\Controllers\Api\ParkirController;
 use App\Http\Controllers\Api\ProsesController;
 
 /*
@@ -43,6 +44,12 @@ Route::post('/api/menu', [MenuController::class,'index']);
 Route::post('/api/proses/simpan-tarif', [ProsesController::class,'simpanjenistarif']);
 Route::get('/api/proses/get-tarif', [ProsesController::class,'showjenistarif']);
 Route::post('/api/proses/hapus-tarif', [ProsesController::class,'hapustarif']);
+
+// === API PARKIR===
+Route::get('/api/proses/i-parkir', [ParkirController::class,'index']);
+Route::post('/api/proses/simpan-parkir', [ParkirController::class,'simpanparkir']);
+Route::get('/api/proses/get-parkir', [ParkirController::class,'showparkir']);
+Route::post('/api/proses/bayar-parkir', [ParkirController::class,'bayarparkir']);
 
 
 // ==== POST =====

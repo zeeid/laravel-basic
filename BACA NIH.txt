@@ -25,3 +25,5 @@ php artisan make:model Pengguna
 
 ===== BUAT KONTROLLER DALAM FOLDER
 php artisan make:controller Api/MenuController
+
+==== Buat model dulu baru di import all di kontroler=====
