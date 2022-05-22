@@ -1,0 +1,24 @@
+IF U DOWNLOAD FROM MY GITHUB
+composer i
+IF ERROR
+composer update
+
+------ WAJIB---------
+php artisan key:generate
+
+-=====-=-=-=-=-=-=-=-
+Copy env rename .env
+
+
+
+- How to start : php artisan serve
+
+M > Models
+V > Resources > views
+C > Http > Controler
+Route > routes > web
+
+--> buat kontroller
+CTRL SHIT P , ketik artisan make kontroler, ketik nama, pilih basic
+
+php artisan make:model Pengguna
