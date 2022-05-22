@@ -27,6 +27,7 @@ use App\Http\Controllers\Api\ProsesController;
 
 Route::get('/', [LoginController::class,'index']);
 Route::get('/login', [LoginController::class,'index']);
+Route::get('/logout', [LoginController::class,'logout']);
 
 // ===VIEW==
 Route::get('/register', [RegisterController::class,'index']);
@@ -39,6 +40,7 @@ Route::get('/dashboard', [DashboardController::class,'index']);
 
 // == MENU==
 Route::post('/api/menu', [MenuController::class,'index']);
+Route::post('/api/login', [LoginController::class,'login']);
 
 // === API TARIF==
 Route::post('/api/proses/simpan-tarif', [ProsesController::class,'simpanjenistarif']);

@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <title>JUDUl</title>
+    <?php 
+    use Illuminate\Support\Facades\Session;
+    if (Session::has('is_login')){
+        
+    }else{
+        header("Location: /logout");
+        exit();
+    }
+?>
+    <title>JUNDI - SISTEM PARKIR</title>
     <script src="assets/js/vendor-all.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -44,7 +52,7 @@
 					<a href="#!" class="b-brand">
 						<!-- ========   change your logo hear   ============ -->
 						<!-- <img src="assets/11sibanter_putih_l.png" alt="LOGO" class="logo" style="height: 35px;margin-left: -25px;"> -->
-						<h4 style="padding-top: 5px;">JUDUL</h4>
+						<h4 style="padding-top: 5px;">JUNDI PARKIR</h4>
 					</a>
 					<a href="#!" class="mob-toggler">
 						<i class="feather icon-more-vertical"></i>
@@ -72,15 +80,15 @@
 								<div class="dropdown-menu dropdown-menu-right profile-notification">
 									<div class="pro-head">
 										<img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
-										<span>USERNMAE</span>
-										<a href="logout.php" class="dud-logout" title="Logout">
+										<span>{{ Session::get('nama') }}</span>
+										<a href="/logout" class="dud-logout" title="Logout">
 											<i class="feather icon-log-out"></i>
 										</a>
 									</div>
 									<ul class="pro-body">
 										<li><a href="#" onclick="menu('Profil')" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
 										<!-- <li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li> -->
-										<li><a href="logout.php" class="dropdown-item"><i class="feather icon-power"></i> Keluar</a></li>
+										<li><a href="/logout" class="dropdown-item"><i class="feather icon-power"></i> Keluar</a></li>
 									</ul>
 								</div>
 							</div>

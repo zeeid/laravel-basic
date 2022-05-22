@@ -1,5 +1,9 @@
-@extends('layout.dashboard')
+{{-- @if(Session::has('is_login')) --}}
 
-@section('konten')
-    
-@endsection
+    @extends('layout.dashboard')
+
+    @section('konten')
+        
+    @endsection
+
+{{-- @endif --}}

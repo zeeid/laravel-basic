@@ -72,73 +72,74 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
-                <form id="form_bayar_parkir">
+            <form id="form_bayar_parkir">
+                <div class="modal-body">
                     @csrf
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Kode Parkir</label>
-                            <div class="col-sm-10">
-                                <input type="text" required class="form-control" id="kode_parkir" name="kode_parkir">
-                            </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Kode Parkir</label>
+                        <div class="col-sm-10">
+                            <input type="text" required class="form-control" id="kode_parkir" name="kode_parkir">
                         </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">No Polisi</label>
-                            <div class="col-sm-10">
-                                <input type="text" required class="form-control" id="no_polisi" name="no_polisi">
-                            </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">No Polisi</label>
+                        <div class="col-sm-10">
+                            <input type="text" required class="form-control" id="no_polisi" name="no_polisi">
                         </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Jenis</label>
-                            <div class="col-sm-10">
-                                <input type="text" readonly class="form-control" id="jenis_kendaraan" name="jenis_kendaraan">
-                            </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Jenis</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control" id="jenis_kendaraan"
+                                name="jenis_kendaraan">
                         </div>
-                        
-                        
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Parkir Tanggal</label>
-                            <div class="col-sm-10">
-                                <input type="text" readonly class="form-control" id="tanggal_parkir" name="tanggal_parkir">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Parkir Status</label>
-                            <div class="col-sm-10">
-                                <input type="text" readonly class="form-control" id="status" name="status">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Waktu Masuk</label>
-                            <div class="col-sm-10">
-                                <input type="text" readonly class="form-control" id="waktu_masuk_xx" name="waktu_masuk">
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Waktu Keluar</label>
-                            <div class="col-sm-10">
-                                <input type="text" required class="form-control" id="waktu_keluar_xx" name="waktu_keluar">
-                            </div>
+
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Parkir Tanggal</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control" id="tanggal_parkir" name="tanggal_parkir">
                         </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Biaya</label>
-                            <div class="col-sm-10">
-                                <input type="text" readonly class="form-control" id="biaya" name="biaya">
-                            </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Parkir Status</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control" id="status" name="status">
                         </div>
-                        <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Pegawai</label>
-                            <div class="col-sm-10">
-                                <input type="text" readonly class="form-control" id="pegawai" name="pegawai">
-                            </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Waktu Masuk</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control" id="waktu_masuk_xx" name="waktu_masuk">
                         </div>
-                        <button type="submit" class="btn btn-danger">Proses</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                {{-- <button type="button" class="btn btn-primary">Understood</button> --}}
-            </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Waktu Keluar</label>
+                        <div class="col-sm-10">
+                            <input type="text" required class="form-control" id="waktu_keluar_xx" name="waktu_keluar">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Biaya</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control" id="biaya" name="biaya">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Pegawai</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control" id="pegawai" name="pegawai">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger">Proses Bayar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    {{-- <button type="button" class="btn btn-primary">Understood</button> --}}
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -176,21 +177,21 @@
 
     function keluar_parkir(kode) {
 
-        var no_polisi = $("#"+kode).data('no_polisi')
-        var jenis_kendaraan = $("#"+kode).data('jenis_kendaraan')
-        var waktu_masuk = $("#"+kode).data('waktu_masuk')
-        var waktu_keluar = $("#"+kode).data('waktu_keluar')
-        var tanggal_parkir = $("#"+kode).data('tanggal_parkir')
-        var status = $("#"+kode).data('status')
-        var biaya = $("#"+kode).data('biaya')
-        var pegawai = $("#"+kode).data('pegawai')
+        var no_polisi = $("#" + kode).data('no_polisi')
+        var jenis_kendaraan = $("#" + kode).data('jenis_kendaraan')
+        var waktu_masuk = $("#" + kode).data('waktu_masuk')
+        var waktu_keluar = $("#" + kode).data('waktu_keluar')
+        var tanggal_parkir = $("#" + kode).data('tanggal_parkir')
+        var status = $("#" + kode).data('status')
+        var biaya = $("#" + kode).data('biaya')
+        var pegawai = $("#" + kode).data('pegawai')
 
-        if (status==1) {
+        if (status == 1) {
             status = 'MASIH PARKIR';
-        }else{
+        } else {
             status = 'Keluar PARKIR';
         }
-        
+
         $("#kode_parkir").val(kode)
         $("#no_polisi").val(no_polisi)
         $("#jenis_kendaraan").val(jenis_kendaraan)
@@ -202,7 +203,7 @@
 
         var waktu = generate_waktu();
         $("#waktu_keluar_xx").val(waktu)
-        setInterval(function(){ 
+        setInterval(function () {
             var waktu = generate_waktu();
             $("#waktu_keluar_xx").val(waktu)
         }, 1000);
@@ -212,7 +213,7 @@
         $.ajax({
             type: "POST",
             url: "api/proses/bayar-parkir",
-            data: data+"&mode=get-biaya",
+            data: data + "&mode=get-biaya",
             beforeSend: function () {
                 // $('#konten').html('')
                 // $("#loading_konten").html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i><b> Mohon Tunggu Sedang Memuat Data</b>') 
@@ -220,7 +221,7 @@
             success: function (hasil) {
                 // $("#tabel_parkir").html(hasil)
                 const obj = JSON.parse(hasil);
-                
+
                 $("#biaya").val(obj.totaltarif)
                 $("#parkirModalBS").modal('show')
             }
@@ -228,13 +229,13 @@
 
     }
 
-    $("#form_bayar_parkir").submit(function (e) { 
+    $("#form_bayar_parkir").submit(function (e) {
         e.preventDefault();
         var data = $("#form_bayar_parkir").serialize()
         $.ajax({
             type: "POST",
             url: "api/proses/bayar-parkir",
-            data: data+"&mode=bayar",
+            data: data + "&mode=bayar",
             beforeSend: function () {
                 // $('#konten').html('')
                 // $("#loading_konten").html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i><b> Mohon Tunggu Sedang Memuat Data</b>') 
@@ -244,23 +245,23 @@
                 const obj = JSON.parse(hasil);
 
                 var status = obj.status
-                var pesan  = obj.pesan
+                var pesan = obj.pesan
 
-                if(status==200){
+                if (status == 200) {
                     $("#parkirModalBS").modal('hide')
 
                     swal({
-                        title: "Berhasil",
-                        text: pesan,
-                        icon: "success",
-                        buttons: [false, "OKE"],
-                        dangerMode: false,
-                    })
-                    .then((willDelete) => {
-                        if (willDelete) {
-                            cari_parkir()
-                        } 
-                    });
+                            title: "Berhasil",
+                            text: pesan,
+                            icon: "success",
+                            buttons: [false, "OKE"],
+                            dangerMode: false,
+                        })
+                        .then((willDelete) => {
+                            if (willDelete) {
+                                cari_parkir()
+                            }
+                        });
                 }
 
             }

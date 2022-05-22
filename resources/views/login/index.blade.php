@@ -10,7 +10,8 @@
                     <div class="card-body">
                         <!-- <img onclick="admin()" src="assets/sibanter_biru_l.png" alt="" class="img-fluid mb-4"> -->
                         <h4 class="mb-3 f-w-400">Login</h4>
-                        <form id="loginf" action="">
+                        <form id="loginwoi">
+                            @csrf
                             <div class="form-group mb-3">
                                 <label class="floating-label" for="Email">User</label>
                                 <input type="text" name="email" class="form-control" id="Email" placeholder="">
@@ -24,7 +25,8 @@
                             <!-- <div class="g-recaptcha" data-sitekey="6LfdZzEcAAAAAGLm8v6x3tzbzoxOkpEwEPbp46Xz"></div> -->
                             <br>
                             <button type="submit" class="btn btn-block btn-primary mb-4">Login</button>
-                            <p class="mb-0 text-muted">Don’t have an account? <a href="/register" class="f-w-400">Register</a></p>
+                            {{-- <button type="submit">Login</button> --}}
+                            {{-- <p class="mb-0 text-muted">Don’t have an account? <a href="/register" class="f-w-400">Register</a></p> --}}
                         </form>
                     </div>
                 </div>

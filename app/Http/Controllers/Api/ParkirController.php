@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 
 class ParkirController extends Controller
 {
@@ -38,6 +39,7 @@ class ParkirController extends Controller
                 'waktu_keluar'      => $request->waktu_keluar,
                 'tanggal_parkir'    => $tgl_now,
                 'status'            => 1,
+                'pegawai'           => Session::get('nama'),
             ];
             $simpan = ParkirModel::create($data);
 
@@ -67,7 +69,9 @@ class ParkirController extends Controller
         $tgl2   = $request->tgl2;
 
         // $select = ParkirModel::all();
-        $select = ParkirModel::whereBetween('tanggal_parkir', [$tgl1, $tgl2])->get();
+        $select = ParkirModel::whereBetween('tanggal_parkir', [$tgl1, $tgl2])
+        ->orderBy('id', 'desc')
+        ->get();
         
         $data = [
             'list_parkir' =>$select,
@@ -121,6 +125,7 @@ class ParkirController extends Controller
                     'status'        => 0,
                     'waktu_keluar'  => $request->waktu_keluar,
                     'lama_parkir'   => $jam,
+                    'pegawai'       => Session::get('nama'),
                 ];
                 $update = ParkirModel::where('kode_parkir',$request->kode_parkir)->update($data_update);
 
