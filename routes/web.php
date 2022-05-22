@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UtamaController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,9 @@ use App\Http\Controllers\RegisterController;
 */
 
 // ===== ROUTE PAKAI KONTROLLER =====
-Route::get('/', [UtamaController::class,'index']);
+// Route::get('/', [UtamaController::class,'index']);
 
+Route::get('/', [LoginController::class,'index']);
 Route::get('/login', [LoginController::class,'index']);
 
 // ===VIEW==
@@ -26,6 +28,9 @@ Route::get('/register', [RegisterController::class,'index']);
 Route::get('/show', [RegisterController::class,'show']);
 Route::get('/update', [RegisterController::class,'update']);
 Route::get('/delete', [RegisterController::class,'delete']);
+
+// == DASHBOARD==
+Route::get('/dashboard', [DashboardController::class,'index']);
 
 
 // ==== POST =====

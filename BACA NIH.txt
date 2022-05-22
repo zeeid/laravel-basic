@@ -20,5 +20,5 @@ Route > routes > web
 
 --> buat kontroller
 CTRL SHIT P , ketik artisan make kontroler, ketik nama, pilih basic
-
+--> OR
 php artisan make:model Pengguna
