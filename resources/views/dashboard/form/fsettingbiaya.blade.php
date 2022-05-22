@@ -9,6 +9,12 @@
         <div class="card">
             <div class="card-header">
                 <h5>Form {{ $judul }}</h5>
+                <?php 
+                    // echo $list_tarif[0]['jenis_kendaraan'];
+                    // if ($list_tarif != '') {
+                    //     $jenis_kendaraan = 
+                    // }
+                ?>
             </div>
             <div class="card-body">
                 <form id="form_tarif">
@@ -20,9 +26,9 @@
                                 <div class="col-sm-10">
                                     <select required name="jenis_kendaraan" id="jenis_kendaraan" class="form-control">
                                         <option value="" selected disabled>--Pilih salah satu--</option>
-                                        <option >Mobil</option>
-                                        <option >Motor</option>
-                                        <option >BUS</option>
+                                        <option <?php if(isset($list_tarif[0]['jenis_kendaraan'])){if($list_tarif[0]['jenis_kendaraan']=='Mobil'){echo "selected";}} ?> >Mobil</option>
+                                        <option <?php if(isset($list_tarif[0]['jenis_kendaraan'])){if($list_tarif[0]['jenis_kendaraan']=='Motor'){echo "selected";}} ?> >Motor</option>
+                                        <option <?php if(isset($list_tarif[0]['jenis_kendaraan'])){if($list_tarif[0]['jenis_kendaraan']=='BUS'){echo "selected";}} ?> >BUS</option>
                                     </select>
                                 </div>
                             </div>
@@ -33,15 +39,15 @@
                             <div class="form-group row">
                                 <label for="inputPassword" class="col-sm-2 col-form-label">Tarif</label>
                                 <div class="col-sm-10">
-                                    <input required type="text" placeholder="Tarif Per Jam" id="tarif" class="form-control readonlyc" name="tarif" value="">
+                                    <input required type="text" placeholder="Tarif Per Jam" id="tarif" class="form-control readonlyc" name="tarif" value="<?php if(isset($list_tarif[0]['tarif'])){echo $list_tarif[0]['tarif'];} ?>">
                                 </div>
                             </div>
                         </div>
                         
                     </div>
-                    <button type="submit" id="simpan" class="btn  btn-primary">SIMPAN</button>
-                    <input type="hidden" readonly name="mode" value="">
-                    <input type="hidden" readonly name="id" value="">
+                    <button type="submit" id="simpan" class="btn  btn-primary"><?php if(isset($list_tarif[0]['tarif'])){echo "UPDATE";}else{echo "SIMPAN";} ?></button>
+                    <input type="hidden" readonly name="mode" value="<?php if(isset($list_tarif[0]['tarif'])){echo "UPDATE";}else{echo "SIMPAN";} ?>">
+                    <input type="hidden" readonly name="id" value="<?php if(isset($list_tarif[0]['id'])){echo $list_tarif[0]['id'];} ?>">
                     <input type="hidden" id="is_new" name="is_new" value="" readonly>
 
                 </form>

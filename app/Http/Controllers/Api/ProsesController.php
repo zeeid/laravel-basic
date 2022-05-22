@@ -21,29 +21,54 @@ class ProsesController extends Controller
             'tarif'             => $request->tarif,
         ];
 
+        $mode   = $request->mode;
+        $id     = $request->id; 
 
-        // cek data sudah ada blum
-        $jml_data = SettingJenisBiaya::where('jenis_kendaraan',$request->jenis_kendaraan)
-        ->where('tarif',$request->tarif)->count();
+        if ($mode=='UPDATE') {
+            $update = SettingJenisBiaya::where('jenis_kendaraan',$request->jenis_kendaraan)
+                                        ->where('id', $id)
+                                        ->update($data);
 
-        if ($jml_data > 0) {
-            # code...
-            $response = array(
-                'status'    => 201, 
-                'pesan'     => 'Data Sudah ada!', 
-                // 'data'      => $data
-            );
+            // dd($update);
+            // response 0 = gagal
+            if ($update == 0) {
+                $response = array(
+                    'status'    => 201, 
+                    'pesan'     => 'Gagal Update Data', 
+                    // 'data'      => $data
+                );
+            }else{
+                $response = array(
+                    'status'    => 200, 
+                    'pesan'     => 'Berhasil', 
+                    // 'data'      => $data
+                );
+            }
+
         }else{
-            $simpan = SettingJenisBiaya::create($data);
+            // cek data sudah ada blum
+            $jml_data = SettingJenisBiaya::where('jenis_kendaraan',$request->jenis_kendaraan)
+            // ->where('tarif',$request->tarif)
+            ->count();
     
-            $response = array(
-                'status'    => 200, 
-                'pesan'     => 'Berhasil', 
-                // 'data'      => $data
-            );
+            if ($jml_data > 0) {
+                # code...
+                $response = array(
+                    'status'    => 201, 
+                    'pesan'     => 'Data Jenis Kendaraan dan Tarif Sudah ada!', 
+                    // 'data'      => $data
+                );
+            }else{
+                $simpan = SettingJenisBiaya::create($data);
+        
+                $response = array(
+                    'status'    => 200, 
+                    'pesan'     => 'Berhasil', 
+                    // 'data'      => $data
+                );
+            }
+
         }
-
-
         return json_encode($response);
     }
 

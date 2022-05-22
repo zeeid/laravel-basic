@@ -18,7 +18,8 @@
                     <td><?= $datax['jenis_kendaraan'] ?></td>
                     <td><?= $datax['tarif'] ?></td>
                     <td>
-                        <button type="button" onclick="hapus_tarif('<?=$datax['id']?>')" class="btn btn-danger btn-xs">Hapus</button>
+                        <button type="button" onclick="hapus_tarif('<?=$datax['id']?>')" class="btn btn-danger btn-sm">Hapus</button>
+                        <button type="button" onclick="fmenu('Tambah Jenis dan Biaya','<?=$datax['id']?>')" class="btn btn-warning btn-sm">Edit</button>
                     </td>
                 </tr>
                 <?php

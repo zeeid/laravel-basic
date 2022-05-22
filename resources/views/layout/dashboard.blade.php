@@ -176,13 +176,13 @@
         });
     }
 
-    function fmenu(menunya){
+    function fmenu(menunya,id=''){
         var menu_before = $("#item_b1").text();
         var tokennya = $("#tokenku").val()
         $.ajax({
             type: "POST",
             url: "api/menu",
-            data: "menunya="+menunya+"&_token="+tokennya,
+            data: "menunya="+menunya+"&_token="+tokennya+"&id="+id,
             beforeSend: function() {
                 // $('#konten').html('')
                 $("#loading_konten").html('<i class="fa fa-spinner fa-spin" aria-hidden="true"></i><b> Mohon Tunggu Sedang Memuat Data</b>') 

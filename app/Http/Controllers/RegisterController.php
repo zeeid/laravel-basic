@@ -48,6 +48,10 @@ class RegisterController extends Controller
         $update->update([
             'nama'=>'UPDATeeee'
         ]);
+
+    //     where('active', 1)
+    //   ->where('destination', 'San Diego')
+    //   ->update(['delayed' => 1]);
         
     }
     public function pendaftaran(Request $request)
