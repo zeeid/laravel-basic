@@ -6,6 +6,10 @@ use App\Http\Controllers\UtamaController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardController;
 
+// ==== KONTROLLER DALAM FOLDER==
+use App\Http\Controllers\Api\MenuController;
+use App\Http\Controllers\Api\ProsesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +35,14 @@ Route::get('/delete', [RegisterController::class,'delete']);
 
 // == DASHBOARD==
 Route::get('/dashboard', [DashboardController::class,'index']);
+
+// == MENU==
+Route::post('/api/menu', [MenuController::class,'index']);
+
+// === API TARIF==
+Route::post('/api/proses/simpan-tarif', [ProsesController::class,'simpanjenistarif']);
+Route::get('/api/proses/get-tarif', [ProsesController::class,'showjenistarif']);
+Route::post('/api/proses/hapus-tarif', [ProsesController::class,'hapustarif']);
 
 
 // ==== POST =====

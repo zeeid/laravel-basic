@@ -22,3 +22,6 @@ Route > routes > web
 CTRL SHIT P , ketik artisan make kontroler, ketik nama, pilih basic
 --> OR
 php artisan make:model Pengguna
+
+===== BUAT KONTROLLER DALAM FOLDER
+php artisan make:controller Api/MenuController
